@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_22_044632) do
+ActiveRecord::Schema.define(version: 2021_01_22_060044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,26 @@ ActiveRecord::Schema.define(version: 2021_01_22_044632) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["swapi_id"], name: "index_people_on_swapi_id", unique: true
+  end
+
+  create_table "planets", force: :cascade do |t|
+    t.integer "swapi_id"
+    t.string "name"
+    t.string "diameter"
+    t.string "rotation_period"
+    t.string "orbital_period"
+    t.string "gravity"
+    t.string "population"
+    t.string "climate"
+    t.string "terrain"
+    t.string "surface_water"
+    t.string "residents"
+    t.string "films"
+    t.string "url"
+    t.string "created"
+    t.string "edited"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
