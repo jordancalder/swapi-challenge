@@ -12,10 +12,6 @@ RSpec.describe Person, type: :model do
     it { is_expected.to validate_presence_of(:mass) }
     it { is_expected.to validate_presence_of(:skin_color) }
     it { is_expected.to validate_presence_of(:homeworld) }
-    it { is_expected.to validate_presence_of(:films) }
-    it { is_expected.to validate_presence_of(:species) }
-    it { is_expected.to validate_presence_of(:starships) }
-    it { is_expected.to validate_presence_of(:vehicles) }
     it { is_expected.to validate_presence_of(:url) }
     it { is_expected.to validate_presence_of(:created) }
     it { is_expected.to validate_presence_of(:edited) }
