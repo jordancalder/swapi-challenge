@@ -1,14 +1,13 @@
 module SwapiServices
   class GetPerson
 
-
     def initialize(params)
       @id = params[:id]
     end
 
     def call
       response = HTTParty.get("#{SWAPI_HOST_URL}/people/#{@id}")
-      payload = response.body
+      payload = JSON.parse(response.body)
 
       if payload['detail']
         OpenStruct.new({ success?: false, error: payload['detail'] })

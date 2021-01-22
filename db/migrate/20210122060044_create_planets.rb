@@ -11,8 +11,8 @@ class CreatePlanets < ActiveRecord::Migration[6.1]
       t.string :climate
       t.string :terrain
       t.string :surface_water
-      t.string :residents
-      t.string :films
+      t.string :residents, array: true, default: []
+      t.string :films, array: true, default: []
       t.string :url
       t.string :created
       t.string :edited
