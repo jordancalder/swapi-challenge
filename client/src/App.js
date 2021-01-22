@@ -15,7 +15,7 @@ function App() {
 
     setIsSending(true);
 
-    const res = await fetch(`http://localhost:3001/api/${endpoint}`)
+    const res = await fetch(`/api/${endpoint}`)
 
     const body = await res.json();
 
