@@ -14,7 +14,7 @@ module SwapiServices
       payload = JSON.parse(response.body)
 
       if payload['detail']
-        OpenStruct.new({ success?: false, error: payload['detail'] })
+        OpenStruct.new({ success?: false, error: payload })
       else
         attributes = payload.merge({ swapi_id: @id })
 

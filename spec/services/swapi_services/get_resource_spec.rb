@@ -17,7 +17,7 @@ RSpec.describe SwapiServices::GetResource do
 
       it 'returns a failing response with message' do
         expect(subject.success?).to eq(false)
-        expect(subject.error).to eq('not found')
+        expect(subject.error).to eq({"detail"=>"not found"})
       end
     end
   end

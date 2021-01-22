@@ -18,9 +18,7 @@ module Api
       if cached_resource.nil?
         response = SwapiServices::GetResource.new(resource: resource, id: swapi_id, klass: klass, is_resource_cachable: is_resource_cachable?(resource)).call
 
-        return response.error unless response.success?
-
-        cached_resource = response.payload
+        cached_resource = response.payload || response.error
       end
 
       render json: cached_resource.to_h, status: 200
