@@ -13,8 +13,8 @@ class Planet < ApplicationRecord
       climate: climate,
       terrain: terrain,
       surface_water: surface_water,
-      residents: residents,
-      films: films,
+      residents: JSON.parse(residents),
+      films: JSON.parse(films),
       url: url,
       created: created,
       edited: edited

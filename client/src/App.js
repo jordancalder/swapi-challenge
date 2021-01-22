@@ -28,14 +28,14 @@ function App() {
     <div className="App">
       <div className="form-group">
         <span>https://swapi.dev/api/</span>
-        <input onChange={handleInputChange} className="form-field" type="text" placeholder=":resource/:id" />
+        <input onChange={handleInputChange} value={endpoint} className="form-field" type="text" placeholder=":resource/:id" />
       </div>
 
       <div className="form-group">
         <input type="button" disabled={isSending} onClick={handleFetchData} value="request" />
       </div>
 
-      <ResponseDisplay response={response} isSending={isSending} />
+      <ResponseDisplay response={response} isSending={isSending} setEndpoint={setEndpoint} handleFetchData={handleFetchData} />
     </div>
   );
 }
