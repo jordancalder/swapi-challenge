@@ -1,3 +1,5 @@
+https://guarded-bastion-44113.herokuapp.com/
+
 # Description
 
 This application serves as a way to explore the Star Wars API at https://swapi.dev. It is backed by a Ruby on Rails API and React.js client. API resources for planets and people are cached in a PostgreSQL database.
