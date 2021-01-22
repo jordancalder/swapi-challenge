@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "Api::People", type: :request do
+RSpec.describe "Api::Resources", type: :request do
   describe "GET show" do
+    let(:swapi_id) { 1 }
     let(:person) { Person.create!(
-      swapi_id: 1,
+      swapi_id: swapi_id,
       name: 'name',
       height: 'height',
       mass: 'mass',
@@ -23,7 +24,7 @@ RSpec.describe "Api::People", type: :request do
     ) }
 
     before do
-      get api_person_path(person)
+      get api_path('people', swapi_id)
     end
 
     it "returns http success" do
